@@ -12,9 +12,9 @@ function App() {
       <h1>과제방</h1>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />} />
+          <Route path="/react-site/" element={<Layout />} />
           <Route index element={<Home />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/react-site/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </>
