@@ -14,10 +14,10 @@ function App() {
       <h1>과제방</h1>
       <BrowserRouter>
         <Routes>
-          <Route path="/react-site2/" element={<Layout />} />
+          <Route path="/react-site/" element={<Layout />} />
           <Route index element={<Home />} />
-          <Route path="/react-site2/login" element={<Login />} />
-          <Route path="/react-site2/project_List" element={<Project_List />} />
+          <Route path="/react-site/login/" element={<Login />} />
+          <Route path="/react-site/project_List/" element={<Project_List />} />
         </Routes>
       </BrowserRouter>
     </>
