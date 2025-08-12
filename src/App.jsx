@@ -16,7 +16,7 @@ function App() {
           <Route path="/react-site/" element={<Layout />} />
           <Route index element={<Home />} />
           <Route path="/react-site/login" element={<Login />} />
-          <Route path="/react-site/Project_List" element={<Project_List />} />
+          <Route path="/react-site/project_List" element={<Project_List />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -13,7 +13,7 @@ function Layout() {
                         <Link to="/react-site/login">Login</Link>
                     </li>
                     <li>
-                        <Link to="/react-site/Project_List">Project List</Link>
+                        <Link to="/react-site/project_List">Project List</Link>
                     </li>
                 </ul>
             </nav>
