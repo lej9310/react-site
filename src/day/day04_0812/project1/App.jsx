@@ -1,4 +1,4 @@
-import './App.css'
+import '../../../App.css'
 import ColorChange from './component/ColorChange'
 import Counter from './component/Counter'
 import InputMirror from './component/InputMirror'

@@ -1,4 +1,4 @@
-import './App.css'
+import '../../../App.css'
 import ExUseEffect01 from '../project2/component2/ExUseEffect01'
 import ExUseEffect02 from '../project2/component2/ExUseEffect02'
 import ExUseEffect03 from '../project2/component2/ExUseEffect03'
