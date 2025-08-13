@@ -1,17 +1,18 @@
-import { BrowserRouter, Routes } from "react-router-dom"
-import { Route } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import './App.css'
 import Login from "./compo/Login"
 import Home from "./compo/Home"
 import Layout from "./compo/Layout"
 import Project_List from "./compo/Project_List"
+import D04P1 from "./day/day04_0812/project1/D04P1"
+import D04P2 from "./day/day04_0812/project2/D04P2"
 
 
 function App() {
   
   return (
     <>
-      <h1>과제방</h1>
+      <h1>이은정의 과제방</h1>
 
       {/* URL 경로에 따라 다른 컴포넌트 렌더링 */}
       <BrowserRouter>
@@ -20,7 +21,13 @@ function App() {
           <Route path="/react-site/" element={<Layout />} />
           <Route index element={<Home />} />
           <Route path="/react-site/login/" element={<Login />} />
+          
+          {/* project_List 안에 하위 라우트 설정*/}
           <Route path="/react-site/project_List/" element={<Project_List />} />
+          <Route path="/react-site/project_List/D04P1/" element={<D04P1 />} />
+          <Route path="/react-site/project_List/D04P2/" element={<D04P2 />} />
+          
+
         </Routes>
       </BrowserRouter>
     </>
