@@ -13,7 +13,7 @@ function Login() {
 
 
     return (
-        <div className="form-container">
+        <d className="form-container">
             {/* 로그인 폼 컴포넌트 추가 */}
             <form onSubmit={handleSubmit}>
 
@@ -54,7 +54,7 @@ function Login() {
                 <button type="submit" className="login-button">로그인</button>
 
             </form>
-        </div>
+        </d>
     )
 }
 

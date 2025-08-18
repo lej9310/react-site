@@ -13,8 +13,7 @@ import D05P2 from "./day/day05_0813/p02-usemap/D05P2"
 function App() {
   
   return (
-    <>
-      <h1>이은정의 과제방</h1>
+    <>     
 
       {/* URL 경로에 따라 다른 컴포넌트 렌더링 */}
       <BrowserRouter>

@@ -3,9 +3,7 @@ import { Link, Outlet } from "react-router-dom"
 function Project_List() {
 
     return (
-        <div>
-            <h1>Project List</h1>
-
+        <>            
             {/* 하위 라우트로 이동할 링크 */}
             <ul>
                 <li>
@@ -18,7 +16,7 @@ function Project_List() {
 
             {/* 하위 컴포넌트 렌더링 위치 */}
             <Outlet />
-        </div>
+        </>
     )
 }
 
