@@ -6,6 +6,8 @@ import Layout from "./compo/Layout"
 import Project_List from "./compo/Project_List"
 import D04P1 from "./day/day04_0812/project1/D04P1"
 import D04P2 from "./day/day04_0812/project2/D04P2"
+import D05P1 from "./day/day05_0813/p01-useeffect/D05P1"
+import D05P2 from "./day/day05_0813/p02-usemap/D05P2"
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
           <Route path="/react-site/project_List/" element={<Project_List />} />
           <Route path="/react-site/project_List/D04P1/" element={<D04P1 />} />
           <Route path="/react-site/project_List/D04P2/" element={<D04P2 />} />
+          <Route path="/react-site/project_List/D05P1/" element={<D05P1 />} />
+          <Route path="/react-site/project_List/D05P2/" element={<D05P2 />} />
           
 
         </Routes>

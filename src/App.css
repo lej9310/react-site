@@ -70,85 +70,35 @@
   cursor: pointer;
 }
 
-li{
-  text-align: left;
+
+.result {
+  background: #ff3b3b46;
+  text-align: center;
+  color: darkred;
+  padding: 5px;
 }
 
-
-
-
-/* 각 입력 필드 컨테이너 */
-.input-container {
-  position: relative; /* X 버튼 위치 설정을 위해 relative 사용 */
-  width: 100%;
-  margin-bottom: 10px;
+button {
+  background-color: lightgreen;
+  margin: 5%;
+  padding: 10px 50px;
 }
 
-/* 입력 필드 공통 스타일 */
-.input {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  outline: none;
-  box-sizing: border-box;
-  transition: border-color 0.3s;
+div.comment {
+  background: lightgrey;
+  text-align: justify;
+  color: black;
+  font-size: 0.9rem;
+  padding: 0 20px;
 }
 
-/* 입력 필드 hover 시 */
-.input:hover {
-  border-color: #888;
+div > ol, ul {   
+  padding-left: 5px;
+  padding-bottom: 10px;
+  list-style-position: outside
 }
 
-/* 상단 모서리만 둥근 스타일 (ID 입력 필드) */
-.radius-top {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-/* 하단 모서리만 둥근 스타일 (PW 입력 필드) */
-.radius-bottom {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-/* X 버튼 스타일 */
-.clear-button {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  background-color: transparent;
-  border: none;
-  color: #888;
-  font-size: 14px;
+ol > li {
   font-weight: bold;
-  cursor: pointer;
-}
-
-/* X 버튼 hover 시 */
-.clear-button:hover {
-  color: #ff0000;
-}
-
-/* 로그인 버튼 스타일 */
-.login-button {
-  width: 100%;
-  padding: 10px 0;
-  font-size: 16px;
-  background-color: green;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-/* 로그인 버튼 hover 시 */
-.login-button:hover {
-  background-color: darkgreen;
+  font-size: medium;
 }
