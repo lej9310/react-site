@@ -9,11 +9,14 @@ const Example1 = () => {
     }, [])
 
     return (
-        <div>
+        <>
             <h1>예제 1.</h1>
             <h2>useEffect: 마운트 시 콘솔 출력</h2>
-            <p style={{color:'blue'}}>useEffect(() => {}, [])</p>
-        </div>
+
+            <div className='comment'>
+                <p>{'useEffect(() => { }, [])'}</p>
+            </div>
+        </>
     );
 };
 

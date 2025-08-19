@@ -17,18 +17,19 @@ const Example4 = () => {
     }, [])
 
     return (
-        <div>
+        <>
             <h1>예제 4.</h1>
-            <h2>외부 API에서 데이터 가져와서 ul 리스트 형태로 화면에 렌더링하기</h2>
-            <br />
-            <p style={{ color: 'blue' }}>posts라는 상태를 useState를 통해 초기화</p>
-            <p style={{ color: 'blue' }}>const [posts, setPosts] = useState([])</p>
-            <br />
-            <p style={{ color: 'blue' }}>fetch</p>
-            <br />
+
+            <div className='comment'>
+                <h2>외부 API에서 데이터 가져와서 ul 리스트 형태로 화면에 렌더링하기</h2>
+                <p>posts라는 상태를 useState를 통해 초기화</p>
+                <p>{'const [posts, setPosts] = useState([])'}</p>
+                <p>fetch 함수로 API 호출 </p>
+            </div>
+
 
             {/* 렌더링 부분 */}
-            <ul>
+            <ul style={{background:'#ff3b3b46', color:'darkred'}}>
                 {/* posts 배열의 각 요소를 map함수로 리스트 아이템으로 변환 */}
                 {posts.map((p) => (
                     <li key={p.id}>
@@ -37,7 +38,7 @@ const Example4 = () => {
                 ))
                 }
             </ul>
-        </div>
+        </>
     );
 };
 

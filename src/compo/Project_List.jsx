@@ -79,10 +79,10 @@ function Project_List() {
                         <td>
                             <ul>
                                 <li>
-                                    <Link to="D04P1">Project 1</Link>{' '}
+                                    <Link to="D05P1">Hook: useEffect</Link>{' '}
                                 </li>
                                 <li>
-                                    <Link to="D04P2">Project 2</Link>{' '}
+                                    <Link to="D05P2">useMap</Link>{' '}
                                 </li>
                             </ul>
                         </td>

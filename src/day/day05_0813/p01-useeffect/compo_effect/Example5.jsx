@@ -17,13 +17,13 @@ const Example5 = () => {
 
 
     return (
-        <div>
+        <>
             <h1>예제 5.</h1>
             <h2>윈도우 크기 감지</h2>
 
             <p style={{ color: 'red' }}>현재 너비: {width}px</p>
 
-        </div>
+        </>
     );
 };
 

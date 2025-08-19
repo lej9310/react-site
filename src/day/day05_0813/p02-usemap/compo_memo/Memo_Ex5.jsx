@@ -18,7 +18,7 @@ const Memo_Ex5 = () => {
     }, [price, quantity, discount])
 
     return (
-        <div>
+        <>
             <h1>예제 5.</h1>
 
             <label>가격: {""}
@@ -51,7 +51,7 @@ const Memo_Ex5 = () => {
             </p>
 
 
-        </div>
+        </>
     );
 };
 

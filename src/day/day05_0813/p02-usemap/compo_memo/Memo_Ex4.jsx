@@ -23,7 +23,7 @@ const Memo_Ex4 = () => {
 
 
     return (
-        <div>
+        <>
             <h1>예제 4.</h1>
             <p style={{ color: 'blue' }}></p>
 
@@ -43,7 +43,7 @@ const Memo_Ex4 = () => {
                 onClick={() => setCount((c) => c + 1)}>
                 Count: {count}
             </button>
-        </div >
+        </ >
     );
 };
 

@@ -21,7 +21,7 @@ const Memo_Ex3 = () => {
     }, [showActive])
 
     return (
-        <div>
+        <>
             <h1>예제 3.</h1>
             <h2>useMemo에서 .filter를 사용하여 user(배열)에서 showActive를 기준으로 필터링</h2>
 
@@ -46,7 +46,7 @@ const Memo_Ex3 = () => {
                     )
                 )}
             </ul>
-        </div>
+        </>
     );
 };
 

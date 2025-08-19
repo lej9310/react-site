@@ -18,7 +18,7 @@ const Memo_Ex1 = () => {
     }, [count])
 
     return (
-        <div>
+        <>
             <h1>Memo_Ex1</h1>
             <h2> useState & useMemo 사용하여 count/double 생성</h2>
             <p style={{ color: 'blue' }}>1. count 상태변수 생성: {"const [count, setCount] = useState(0)"}</p>
@@ -31,7 +31,7 @@ const Memo_Ex1 = () => {
             {/* 버튼 클릭하면 setCount 함수를 통해 카운트 1씩 증가 */}
             <p style={{ color: 'blue' }}>3. 버튼: setCount 함수 이용하여 count 값의 1씩 증가: {"<button onClick={() => setCount(c => c + 1)}></button>"}</p>
             <button style={{color:'white', background:'green'}} onClick={() => setCount(c => c + 1)}>++1씩 증가</button>
-        </div>
+        </>
     );
 };
 
