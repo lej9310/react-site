@@ -1,52 +1,89 @@
 #root {
-  width: 90%;
-  max-width: 1280px;
+  width: 100%;
+  max-width: 1750px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+
+/* 홈 화면 Layout - page top ========================================== */
+.top {
+  position: absolute;
+  padding: 15px;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+/* 로고는 좌측에 플로트 유지 */
+.react_logo {
+  float: left !important;
+  height: 60px;
+  width: auto;
 }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* topnav는 상대 위치로 변경, 상단 좌측 약간 띄움 */
+.topnav {
+  position: absolute;
+  top: 20px;
+  left: 100px;
+  right: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 100;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.item {
+  width: 100px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  line-height: 25px;
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.item.btn:hover {
+  background-color: #0b57d0;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.card {
-  padding: 2em;
+/* Sign in 버튼 스타일 - 오른쪽 정렬 및 버튼 모양 */
+.Signin_btn {
+  margin-left: auto;
+  background-color: #0b57d0;
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
 }
 
-.read-the-docs {
-  color: #888;
+.Signin_btn:hover {
+  text-decoration: none;
+  transform: none;
+  box-shadow: 0 4px 10px #474747;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 홈 화면 Layout 헤더/박스 ===================== */
-/* 헤더 */
+/* 홈 화면 Layout - body top ========================================== */
 .img_wrap {
   position: relative;
   height: 35vh;
@@ -79,35 +116,7 @@
   text-align: center;
 }
 
-/* 박스 */
-.Layout_box {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  /* 모서리 둥글게 */
-  background-color: #f9f9f9;
-}
-
-.Menu-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo {
-  height: 100px;
-  width: auto;
-}
-
-.Menu-box h2 {
-  font-size: 3rem;
-  margin: 0;
-  font-weight: 600;
-}
-
-/* 프로젝트 리스트 - 테이블 ===================== */
+/* 프로젝트 리스트 - 테이블 ========================================== */
 table {
   width: 100%;
   margin: 30px auto;
@@ -132,7 +141,7 @@ td>ul {
   list-style-type: none;
   line-height: 30px;
   text-align: left;
-  padding:0 10px
+  padding: 0 10px
 }
 
 table li::before {
@@ -152,7 +161,7 @@ table li::before {
   vertical-align: middle;
 }
 
-a {
+.prj_list a {
   color: black;
   text-decoration: none;
   /* transform 효과 적용을 위해 */
@@ -161,15 +170,13 @@ a {
   transition: transform 0.3s ease;
 }
 
-a:hover {
+.prj_list a:hover {
   color: blue;
   /* 1.1배 글씨 크기 확대 */
-  transform: scale(1.1);
+  transform: scale(1.04);
 }
 
-
-
-/* 로그인 폼 스타일 추가 =====================*/
+/* 로그인 폼 스타일 추가 ========================================== */
 .form-container {
   display: flex;
   flex-direction: column;
@@ -185,7 +192,7 @@ a:hover {
   margin-bottom: 10px;
 }
 
-.login-button {
+.Signin-button {
   background-color: green;
   color: white;
   margin: 10px 0 0 0;
@@ -195,7 +202,8 @@ a:hover {
   cursor: pointer;
 }
 
-/* 결과 표출 ===================== */
+
+/* 결과 표출 ========================================== */
 .result {
   background: #ff3b3b46;
   text-align: center;

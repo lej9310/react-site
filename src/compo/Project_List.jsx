@@ -6,7 +6,7 @@ function Project_List() {
         <>
             {/* 하위 라우트로 이동할 링크 */}
             <div>
-                <table>
+                <table className="prj_list">
                     <thead>
                         <tr>
                             <td>DAY</td>
@@ -67,7 +67,7 @@ function Project_List() {
                             <td>
                                 <ul>
                                     <li>
-                                        <Link to="D04P1">Component 생성: Counter, InputMirror, ColorChange, TodoList</Link>{' '}
+                                        <Link to="D04P1">Component: Counter, InputMirror, ColorChange, TodoList</Link>{' '}
                                     </li>
                                     <li>
                                         <Link to="D04P2">Hook: UseEffect </Link>

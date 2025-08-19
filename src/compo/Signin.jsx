@@ -1,7 +1,7 @@
 import { useState } from "react"
 import '../App.css'
 
-function Login() {
+function Signin() {
     const [id, setID] = useState("")
     const [pw, setPW] = useState("")
 
@@ -51,11 +51,11 @@ function Login() {
                     )}
                 </div>
 
-                <button type="submit" className="login-button">로그인</button>
+                <button type="submit" className="Signin-button">로그인</button>
 
             </form>
         </d>
     )
 }
 
-export default Login
+export default Signin

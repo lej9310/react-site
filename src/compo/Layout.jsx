@@ -1,35 +1,32 @@
 import { Link, Outlet } from "react-router-dom"
 import project_img from '../image/project1.jpg';
-import logo from '../image/react_logo.png';
+import react_logo from '../image/react_logo.png';
+import "../App.css"
 
 function Layout() {
+
     return (
         <>
-            {/* 상단 로고 영역 */}
-            <header className="img_wrap">
-                <img src={project_img} alt="project image"></img>
-                <div className="text_on_img">My React List</div>
+            <header className="top">
+                <img src={react_logo} alt="로고" className="react_logo" />
+
+                <nav className="topnav">
+                    <Link to="/react-site/project_List/" className="item btn">Project List</Link>
+                    <Link to="/react-site/" className="item btn">Home</Link>
+                    <Link to="/react-site/signin/" className="item Signin_btn">Sign in</Link>
+                </nav>
             </header>
 
-            <nav className="nav-menu">
-                <div className="Menu-box">
-                    <img src={logo} alt="로고" className="logo" />
-                    <h2>MENU</h2>
-                </div>
+            <main>
+                <Outlet />
+                <h2>React Main Home</h2>
 
-                <div className="Layout_box">
-                    <Link to="/react-site/">Home</Link>
+                <div className="img_wrap">
+                    <img src={project_img} alt="project image"></img>
+                    <div className="text_on_img">My React List</div>
                 </div>
+            </main>
 
-                <div className="Layout_box">
-                    <Link to="/react-site/login/">Login</Link>
-                </div>
-
-                <div className="Layout_box">
-                    <Link to="/react-site/project_List/">Project List</Link>
-                </div>
-            </nav>
-            <Outlet></Outlet>
         </>
     )
 }

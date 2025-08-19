@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import './App.css'
-import Login from "./compo/Login"
+import Signin from "./compo/Signin"
 import Home from "./compo/Home"
 import Layout from "./compo/Layout"
-// 프로젝트 목록 계속 추가
 import Project_List from "./compo/Project_List"
+// 프로젝트 목록 계속 추가 ===============================
 import D04P1 from "./day/day04_0812/project1/D04P1"
 import D04P2 from "./day/day04_0812/project2/D04P2"
 import D05P1 from "./day/day05_0813/p01-useeffect/D05P1"
@@ -21,16 +21,16 @@ function App() {
 
   return (
     <>
-
       {/* URL 경로에 따라 다른 컴포넌트 렌더링 */}
       <BrowserRouter>
         <Routes>
-          {/* 깃헙은 root가 아니라, Repository 물고 들어옴 */}
+          {/* Layout을 최상위 요소로 설정, 자식 라우트는 모두 여기에 포함 */}
           <Route path="/react-site/" element={<Layout />} />
+           {/* index는 /react-site/로 접속 시 Home 출력 */}
           <Route index element={<Home />} />
-          <Route path="/react-site/login/" element={<Login />} />
+          <Route path="/react-site/Signin/" element={<Signin />} />
 
-          {/* project_List 안에 하위 라우트 설정*/}
+           {/* 하위 페이지들은 모두 Layout 내부에서 Outlet으로 렌더링 */}
           <Route path="/react-site/project_List/" element={<Project_List />} />
 
           <Route path="/react-site/project_List/D04P1/" element={<D04P1 />} />
@@ -49,7 +49,6 @@ function App() {
           {/* 루트에서 직접 접근 가능한 postId 경로 추가 */}
           <Route path="/post/:postId" element={<PostViewPage />} />
           <Route path="post-write" element={<PostWritePage />} />
-
 
         </Routes>
       </BrowserRouter>
