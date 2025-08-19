@@ -1,13 +1,8 @@
-import { useState } from 'react';
+import { use, useState } from 'react';
 import { useNavigate } from 'react-router';
 import styled from 'styled-components';
-import TextInput from './ui/TextInput';
-import Button from './ui/Button';
-// 설치 먼저: Redux toolkit
-// npm install @reduxjs/toolkit react-redux
-import { createSlice } from '@reduxjs/toolkit';
-import { useDispatch } from 'react-redux'
-// import { addPost } from './실제 경로'
+import TextInput from '../ui/TextInput';
+import Button from '../ui/Button';
 
 const Wrapper = styled.div`
     padding: 16px;
@@ -31,46 +26,40 @@ function PostWritePage(props) {
 
     // 1. 페이지 이동 함수(useNavigate)
     const navigate = useNavigate();
-    const dispatch = useDispatch()
 
     // 2. 글작성-제목과 내용 입력값 관리를 위한 상태 선언(초기값: 빈칸)
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState(null)
 
-    // * 새글 작성하기 위한 Redux 사용, Slice 정의    
-    const postsSlice = createSlice({
-        name: 'posts',
-        // 게시글 목록
-        initialState: { item: [] },
-        reducers: {
-            addPost: (state, action) => {
-                // 새 게시글을 배열 끝에 추가
-                state.items.push(action.payload)
-            },
-            // 콤마 빠드리지 않기
-        },
-    })
+    const handleSubmit = async () => {
+        setLoading(true)
+        setError(null)
 
-    const handleSubmit = () => {
-        if (!title.trim() || !content.trim()) {
-            alert('제목과 내용을 모두 입력해 주세요.')
-            return
+        try {
+            const response = await fetch('/api/posts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ title, content }),
+            })
+
+            // ok가 아니면 => 실패하면
+            if (!response.ok) {
+                throw new Error('글 작성에 실패했습니다.')
+            }
+
+            // 글작성 완료(성공) 시, 메인 페이지로 이동
+            navigate('/')
+
+        } catch (err) {
+            setError(err.message)
+        } finally {
+            setLoading(false)
         }
     }
-
-    // 새 게시글 객체 생성
-    const newPost = {
-        id:Date.now(),
-        title,
-        content,        
-        Comments: [],  // 초기값 설정
-    }
-
-    // Redux 액션 디스패치로 상태에 새 게시글 추가
-    dispatch(addPost(newPost))
-
-    // 글 작성 완료 후 메인 페이지로 이동
-    navigate('/')
 
     return (
         <Wrapper>
@@ -101,15 +90,16 @@ function PostWritePage(props) {
 
                 {/* 5. 글 작성 완료 버튼 생성 */}
                 <Button
-                    title={'글 작성 완료'}
+                    title={loading ? '글 작성 중...' : '글 작성 완료'}
                     // 클릭 시, 메인 페이지로 이동
                     onClick={handleSubmit}
+                    disabled = {loading}
                 />
+
+                {error && <ErrorText>{error}</ErrorText>}
             </Container>
         </Wrapper>
     );
 }
 
 export default PostWritePage;
-export const { addPost } = postsSlice.actions
-export default postsSlice.reducers
