@@ -26,34 +26,10 @@ function PostWritePage(props) {
 
     // 1. 페이지 이동 함수(useNavigate)
     const navigate = useNavigate()
-    // 새 게시글 추가하기
-    const dispatch = useDispatch()
-
 
     // 2. 글작성-제목과 내용 입력값 관리를 위한 상태 선언(초기값: 빈칸)
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
-
-    const handleSubmit = () => {
-        if (!title.trim() || !content.trim()) {
-            alert('제목과 내용을 모두 입력하세요.');
-            return;
-        }
-
-        // 새 게시글 객체 생성
-        const newPost = {
-            id: Date.now(),
-            title,
-            content,
-            comments: [], // 초기 댓글 목록 빈 배열 등 원하는 초기값 설정 가능
-        };
-
-        // Redux 액션 디스패치로 상태에 새 게시글 추가
-        dispatch(addPost(newPost))
-
-        // 글 작성 완료 후 메인 페이지로 이동
-        navigate('/');
-    }
 
     return (
         <Wrapper>
@@ -84,13 +60,13 @@ function PostWritePage(props) {
 
                 {/* 5. 글 작성 완료 버튼 생성 */}
                 <Button
-                    title={loading ? '글 작성 중...' : '글 작성 완료'}
+                    title='글 작성하기'
                     // 클릭 시, 메인 페이지로 이동
-                    onClick={handleSubmit}
-                    disabled={loading}
+                    onClick={() => {
+                        navigate('/')
+                    }}
                 />
 
-                {error && <ErrorText>{error}</ErrorText>}
             </Container>
         </Wrapper>
     );

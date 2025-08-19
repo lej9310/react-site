@@ -1,9 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 // Pages
 import MainPage from './components/pages/MainPage';
 import PostWritePage from './components/pages/PostWritePage';
 import PostViewPage from './components/pages/PostViewPage';
+
 
 const MainTitleText = styled.p`
     font-size: 24px;
@@ -13,8 +14,8 @@ const MainTitleText = styled.p`
 
 function D07P2(props) {
     return (
-        <BrowserRouter>
-            <MainTitleText>소플의 미니 블로그</MainTitleText>
+        <>
+        {/* <MainTitleText>소플의 미니 블로그</MainTitleText> */}
             <Routes>
                 <Route
                     index
@@ -29,7 +30,7 @@ function D07P2(props) {
                     element={<PostViewPage />}
                 />
             </Routes>
-        </BrowserRouter>
+        </>
     );
 }
 
