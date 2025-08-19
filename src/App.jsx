@@ -15,6 +15,7 @@ import D06P3 from "./day/day06_0814/p03/D06P3"
 import D07P1 from "./day/day07_0818/p01/D07P1"
 import D07P2 from "./day/day07_0818/p02/D07P2"
 import PostViewPage from "./day/day07_0818/p02/components/pages/PostViewPage"
+import PostWritePage from "./day/day07_0818/p02/components/pages/PostWritePage"
 
 function App() {
 
@@ -47,7 +48,7 @@ function App() {
           <Route path="/react-site/project_List/D07P2/*" element={<D07P2 />} />
           {/* 루트에서 직접 접근 가능한 postId 경로 추가 */}
           <Route path="/post/:postId" element={<PostViewPage />} />
-
+          <Route path="post-write" element={<PostWritePage />} />
 
 
         </Routes>
