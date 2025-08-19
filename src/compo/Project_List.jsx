@@ -19,10 +19,10 @@ function Project_List() {
                         <td>
                             <ul>
                                 <li>
-                                    <Link to="D04P1">채워야함</Link>{' '}
+                                    <Link to="D04P1">채워야함</Link>
                                 </li>
                                 <li>
-                                    <Link to="D04P2">채워야함</Link>{' '}
+                                    <Link to="D04P2">채워야함</Link>
                                 </li>
                             </ul>
                         </td>
@@ -34,10 +34,10 @@ function Project_List() {
                         <td>
                             <ul>
                                 <li>
-                                    <Link to="D04P1">채워야함</Link>{' '}
+                                    <Link to="D04P1">채워야함</Link>
                                 </li>
                                 <li>
-                                    <Link to="D04P2">채워야함</Link>{' '}
+                                    <Link to="D04P2">채워야함</Link>
                                 </li>
                             </ul>
                         </td>
@@ -49,10 +49,10 @@ function Project_List() {
                         <td>
                             <ul>
                                 <li>
-                                    <Link to="D04P1">채워야함</Link>{' '}
+                                    <Link to="D04P1">채워야함</Link>
                                 </li>
                                 <li>
-                                    <Link to="D04P2">채워야함</Link>{' '}
+                                    <Link to="D04P2">채워야함</Link>
                                 </li>
                             </ul>
                         </td>
@@ -67,7 +67,7 @@ function Project_List() {
                                     <Link to="D04P1">Component 생성: Counter, InputMirror, ColorChange, TodoList</Link>{' '}
                                 </li>
                                 <li>
-                                    <Link to="D04P2">Hook: UseEffect </Link>{' '}
+                                    <Link to="D04P2">Hook: UseEffect </Link>
                                 </li>
                             </ul>
                         </td>
@@ -79,10 +79,10 @@ function Project_List() {
                         <td>
                             <ul>
                                 <li>
-                                    <Link to="D05P1">Hook: useEffect</Link>{' '}
+                                    <Link to="D05P1">Hook: useEffect</Link>
                                 </li>
                                 <li>
-                                    <Link to="D05P2">useMap</Link>{' '}
+                                    <Link to="D05P2">useMap</Link>
                                 </li>
                             </ul>
                         </td>
@@ -94,10 +94,13 @@ function Project_List() {
                         <td>
                             <ul>
                                 <li>
-                                    <Link to="D06P1">Hook: useEffect</Link>{' '}
+                                    <Link to="D06P1">Hook:</Link>
                                 </li>
                                 <li>
-                                    <Link to="D06P2">useMap</Link>{' '}
+                                    <Link to="D06P2">Callback</Link>
+                                </li>
+                                <li>
+                                    <Link to="D06P3">Ref</Link>
                                 </li>
                             </ul>
                         </td>
