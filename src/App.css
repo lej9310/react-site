@@ -122,7 +122,7 @@ td {
   padding: 5px 10px 5px 10px;
 }
 
-.head {
+thead {
   text-align: center;
   font-weight: bold;
   background-color: lightblue;
