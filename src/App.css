@@ -130,8 +130,9 @@ td {
 
 td>ul {
   list-style-type: none;
-  line-height: 40px;
+  line-height: 30px;
   text-align: left;
+  padding:0 10px
 }
 
 table li::before {

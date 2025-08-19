@@ -1,4 +1,4 @@
-import './App.css'
+import '../../../App.css'
 import Memo_Ex1 from './compo_memo/Memo_Ex1'
 import Memo_Ex2 from './compo_memo/Memo_Ex2'
 import Memo_Ex3 from './compo_memo/Memo_Ex3'

@@ -88,6 +88,21 @@ function Project_List() {
                         </td>
                     </tr>
 
+                    <tr>
+                        <td>DAY06</td>
+                        <td>08.14.(목)</td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <Link to="D06P1">Hook: useEffect</Link>{' '}
+                                </li>
+                                <li>
+                                    <Link to="D06P2">useMap</Link>{' '}
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+
                 </table>
             </div>
 
