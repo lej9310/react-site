@@ -10,10 +10,10 @@ function Project_List() {
                     <tr className="head">
                         <td>DAY</td>
                         <td>DATE</td>
-                        <td>Project</td>                        
+                        <td>Project</td>
                     </tr>
 
-                     <tr>
+                    <tr>
                         <td>DAY01</td>
                         <td>08.07.(목)</td>
                         <td>
@@ -28,7 +28,7 @@ function Project_List() {
                         </td>
                     </tr>
 
-                     <tr>
+                    <tr>
                         <td>DAY02</td>
                         <td>08.08.(금)</td>
                         <td>
@@ -94,7 +94,7 @@ function Project_List() {
                         <td>
                             <ul>
                                 <li>
-                                    <Link to="D06P1">Hook:</Link>
+                                    <Link to="D06P1">Memo</Link>
                                 </li>
                                 <li>
                                     <Link to="D06P2">Callback</Link>
@@ -106,6 +106,20 @@ function Project_List() {
                         </td>
                     </tr>
 
+                    <tr>
+                        <td>DAY07</td>
+                        <td>08.18.(월)</td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <Link to="D07P1">Provider, JS, Zustand, Redux</Link>
+                                </li>
+                                <li>
+                                    <Link to="D06P2">J</Link>
+                                </li>                                
+                            </ul>
+                        </td>
+                    </tr>
                 </table>
             </div>
 

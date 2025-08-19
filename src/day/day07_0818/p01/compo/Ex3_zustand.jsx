@@ -1,4 +1,4 @@
-import React from 'react';
+// zustand 설치 먼저하기 => npm install zustand
 import { store_zustand } from '../js/store_zustand';
 
 const Ex3_zustand = () => {

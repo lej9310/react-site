@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { store_public } from '../js/store_public';
 
 const Ex2_js = () => {
