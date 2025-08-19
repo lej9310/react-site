@@ -69,7 +69,7 @@ function PostViewPage(props) {
                 <Button
                     title='뒤로 가기'
                     onClick={() => {
-                        navigate('/');
+                        navigate('/react-site/project_List/D07P2');
                     }}
                 />
 
@@ -99,9 +99,9 @@ function PostViewPage(props) {
 
                 {/* 댓글 작성하기 버튼 클릭하면 메인 페이지('/')로 이동 */}
                 <Button
-                    title='댓글 작성하기'
+                    title='댓글 작성 완료'
                     onClick={() => {
-                        navigate('/');
+                        navigate('/react-site/project_List/D07P2');
                     }}
                 />
             </Container>

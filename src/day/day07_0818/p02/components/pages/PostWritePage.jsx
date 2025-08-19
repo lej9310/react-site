@@ -60,10 +60,10 @@ function PostWritePage(props) {
 
                 {/* 5. 글 작성 완료 버튼 생성 */}
                 <Button
-                    title='글 작성하기'
+                    title='게시글 작성 완료'
                     // 클릭 시, 메인 페이지로 이동
                     onClick={() => {
-                        navigate('/')
+                        navigate('/react-site/project_List/D07P2')
                     }}
                 />
 
