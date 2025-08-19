@@ -20,11 +20,13 @@ function Layout() {
                 <div className="Layout_box">
                     <Link to="/react-site/">Home</Link>
                 </div>
+
                 <div className="Layout_box">
-                    <Link to="/react-site/login">Login</Link>
+                    <Link to="/react-site/login/">Login</Link>
                 </div>
+
                 <div className="Layout_box">
-                    <Link to="/react-site/project_List">Project List</Link>
+                    <Link to="/react-site/project_List/">Project List</Link>
                 </div>
             </nav>
             <Outlet></Outlet>
