@@ -8,7 +8,7 @@ function Layout() {
             {/* 상단 로고 영역 */}
             <header className="img_wrap">
                 <img src={project_img} alt="project image"></img>
-                <div class="text_on_img">My React List</div>
+                <div className="text_on_img">My React List</div>
             </header>
 
             <nav className="nav-menu">

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { use, useState } from 'react';
 import { useNavigate } from 'react-router';
 import styled from 'styled-components';
 import TextInput from '../ui/TextInput';
@@ -25,34 +25,40 @@ const Container = styled.div`
 function PostWritePage(props) {
 
     // 1. 페이지 이동 함수(useNavigate)
-    const navigate = useNavigate()
-    // 새 게시글 추가하기
-    const dispatch = useDispatch()
-
+    const navigate = useNavigate();
 
     // 2. 글작성-제목과 내용 입력값 관리를 위한 상태 선언(초기값: 빈칸)
-    const [title, setTitle] = useState('')
-    const [content, setContent] = useState('')
+    const [title, setTitle] = useState('');
+    const [content, setContent] = useState('');
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState(null)
 
-    const handleSubmit = () => {
-        if (!title.trim() || !content.trim()) {
-            alert('제목과 내용을 모두 입력하세요.');
-            return;
+    const handleSubmit = async () => {
+        setLoading(true)
+        setError(null)
+
+        try {
+            const response = await fetch('/api/posts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ title, content }),
+            })
+
+            // ok가 아니면 => 실패하면
+            if (!response.ok) {
+                throw new Error('글 작성에 실패했습니다.')
+            }
+
+            // 글작성 완료(성공) 시, 메인 페이지로 이동
+            navigate('/')
+
+        } catch (err) {
+            setError(err.message)
+        } finally {
+            setLoading(false)
         }
-
-        // 새 게시글 객체 생성
-        const newPost = {
-            id: Date.now(),
-            title,
-            content,
-            comments: [], // 초기 댓글 목록 빈 배열 등 원하는 초기값 설정 가능
-        };
-
-        // Redux 액션 디스패치로 상태에 새 게시글 추가
-        dispatch(addPost(newPost))
-
-        // 글 작성 완료 후 메인 페이지로 이동
-        navigate('/');
     }
 
     return (
@@ -65,8 +71,8 @@ function PostWritePage(props) {
                     value={title}
                     placeholder='제목을 입력하세요.'
                     // 제목 입력값 변경 시 상태 업데이트
-                    onChange={(e) => {
-                        setTitle(e.target.value);
+                    onChange={(event) => {
+                        setTitle(event.target.value);
                     }}
                 />
 
@@ -77,8 +83,8 @@ function PostWritePage(props) {
                     value={content}
                     // 내용 입력값 변경 시 상태 업데이트
                     placeholder='내용을 입력하세요.'
-                    onChange={(e) => {
-                        setContent(e.target.value);
+                    onChange={(event) => {
+                        setContent(event.target.value);
                     }}
                 />
 
@@ -87,7 +93,7 @@ function PostWritePage(props) {
                     title={loading ? '글 작성 중...' : '글 작성 완료'}
                     // 클릭 시, 메인 페이지로 이동
                     onClick={handleSubmit}
-                    disabled={loading}
+                    disabled = {loading}
                 />
 
                 {error && <ErrorText>{error}</ErrorText>}

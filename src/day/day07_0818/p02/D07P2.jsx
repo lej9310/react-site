@@ -11,7 +11,7 @@ const MainTitleText = styled.p`
     text-align: center;
 `;
 
-function mini(props) {
+function D07P2(props) {
     return (
         <BrowserRouter>
             <MainTitleText>소플의 미니 블로그</MainTitleText>
@@ -33,4 +33,4 @@ function mini(props) {
     );
 }
 
-export default mini;
+export default D07P2;

@@ -13,7 +13,7 @@ import D06P1 from "./day/day06_0814/p01/D06P1"
 import D06P2 from "./day/day06_0814/p02/D06P2"
 import D06P3 from "./day/day06_0814/p03/D06P3"
 import D07P1 from "./day/day07_0818/p01/D07P1"
-// import mini from "./day/day07_0818/p02/mini"
+import D07P2 from "./day/day07_0818/p02/D07P2"
 
 function App() {
 
@@ -42,7 +42,7 @@ function App() {
           <Route path="/react-site/project_List/D06P3/" element={<D06P3 />} />
 
           <Route path="/react-site/project_List/D07P1/" element={<D07P1 />} />
-          {/* <Route path="/react-site/project_List/mini/" element={<mini />} /> */}
+          <Route path="/react-site/project_List/D07P2/" element={<D07P2 />} />
 
 
         </Routes>
