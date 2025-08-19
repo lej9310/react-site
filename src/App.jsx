@@ -13,11 +13,12 @@ import D06P1 from "./day/day06_0814/p01/D06P1"
 import D06P2 from "./day/day06_0814/p02/D06P2"
 import D06P3 from "./day/day06_0814/p03/D06P3"
 import D07P1 from "./day/day07_0818/p01/D07P1"
+import mini from "./day/day07_0818/p02/mini"
 
 function App() {
-  
+
   return (
-    <>     
+    <>
 
       {/* URL 경로에 따라 다른 컴포넌트 렌더링 */}
       <BrowserRouter>
@@ -26,13 +27,13 @@ function App() {
           <Route path="/react-site/" element={<Layout />} />
           <Route index element={<Home />} />
           <Route path="/react-site/login/" element={<Login />} />
-          
+
           {/* project_List 안에 하위 라우트 설정*/}
           <Route path="/react-site/project_List/" element={<Project_List />} />
 
           <Route path="/react-site/project_List/D04P1/" element={<D04P1 />} />
           <Route path="/react-site/project_List/D04P2/" element={<D04P2 />} />
-          
+
           <Route path="/react-site/project_List/D05P1/" element={<D05P1 />} />
           <Route path="/react-site/project_List/D05P2/" element={<D05P2 />} />
 
@@ -41,7 +42,8 @@ function App() {
           <Route path="/react-site/project_List/D06P3/" element={<D06P3 />} />
 
           <Route path="/react-site/project_List/D07P1/" element={<D07P1 />} />
-          
+          <Route path="/react-site/project_List/mini/" element={<mini />} />
+
 
         </Routes>
       </BrowserRouter>

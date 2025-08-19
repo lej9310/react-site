@@ -118,7 +118,7 @@ function Project_List() {
                                         <Link to="D07P1">Provider, JS, Zustand, Redux Toolkit</Link>
                                     </li>
                                     <li>
-                                        <Link to="D06P2">mini</Link>
+                                        <Link to="mini">소플의 mini blog 제작 </Link>
                                     </li>
                                 </ul>
                             </td>

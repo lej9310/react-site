@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import styled from 'styled-components';
-import TextInput from '../ui/TextInput';
-import Button from '../ui/Button';
+import TextInput from './ui/TextInput';
+import Button from './ui/Button';
 // 설치 먼저: Redux toolkit
 // npm install @reduxjs/toolkit react-redux
 import { createSlice } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux'
-import { addPost } from './실제 경로'
+// import { addPost } from './실제 경로'
 
 const Wrapper = styled.div`
     padding: 16px;
