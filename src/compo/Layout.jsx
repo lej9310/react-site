@@ -7,16 +7,23 @@ function Layout() {
     return (
         <>
             <header className="top">
-                <img src={react_logo} alt="로고" className="react_logo" />
+                <Link to="/">
+                    <img
+                        src={react_logo}
+                        alt="React Logo"
+                        className="react_logo"
+                        style={{ cursor: "pointer" }}
+                    />
+                </Link>
+
                 <nav className="topnav">
                     <Link to="project_List/" className="item btn">Project List</Link>
-                    <Link to="/" className="item btn">Home</Link>
-                    <Link to="signin/" className="item Signin_btn">Sign in</Link>
+                    <Link to="/signin" className="item Signin_btn">Sign in</Link>
                 </nav>
             </header>
 
             <main>
-                <Outlet />                
+                <Outlet />
                 <div className="img_wrap">
                     <img src={project_img} alt="project image"></img>
                     <div className="text_on_img">My React List</div>

@@ -25,11 +25,13 @@ function App() {
       <Routes>
         {/* Layout을 최상위 요소로 설정 */}
         <Route path="/" element={<Layout />} >
-          <Route index element={<Home />} />
-          <Route path="Signin" element={<Signin />} />
+          <Route index element={<Home />} />          
           <Route path="project_List" element={<Project_List />} />
         </Route>
-        
+
+        {/* Layout 없이 별도 페이지로 Signin 설정 */}
+        <Route path="/Signin" element={<Signin />} />
+
         {/* 하위 페이지: Layout 내부에서 Outlet으로 렌더링 */}
         <Route path="project_List/D04P1" element={<D04P1 />} />
         <Route path="project_List/D04P2/" element={<D04P2 />} />

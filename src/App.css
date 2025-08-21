@@ -15,28 +15,28 @@
   left: 0;
   right: 0;  
   width: 100%;
-  height: 60px;  
-  padding: 15px;  
+  height: 50px; 
+  padding: 10px 15px;
   background-color: white;
   z-index: 9999;  
 }
 
 /*  페이지 내 콘텐츠가 .top 영역 아래에서 시작되도록 */
 body {
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 /* 로고는 좌측에 플로트 유지 */
 .react_logo {
   float: left !important;
-  height: 60px;
+  height: 50px;
   width: auto;
 }
 
 /* topnav는 상대 위치로 변경, 상단 좌측 약간 띄움 */
 .topnav {
   position: absolute;
-  top: 20px;
+  top: 10px;
   left: 100px;
   right: 50px;
   height: 40px;
@@ -68,7 +68,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Sign in 버튼 스타일 - 오른쪽 정렬 및 버튼 모양 */
+/* 홈 화면의 Sign in 버튼 */
 .Signin_btn {
   margin-left: auto;
   background-color: #0b57d0;
@@ -181,12 +181,28 @@ table li::before {
   transform: scale(1.04);
 }
 
-/* 로그인 폼 스타일 추가 ========================================== */
+/* 로그인 화면 ================================================== */
+.signin-wrapper {
+  display: flex;
+  align-items: center;     
+  justify-content: center;
+  gap: 10px;              
+  min-height: 70vh;       
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.signin-logo {
+  height: 100%;
+  max-height: 300px;       
+  object-fit: contain;    
+  cursor: pointer;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 300px;
+  max-width: 350px;
   margin: 50px auto;
 }
 
@@ -198,7 +214,7 @@ table li::before {
 }
 
 .Signin-button {
-  background-color: green;
+  background-color: #0b57d0;
   color: white;
   margin: 10px 0 0 0;
   padding: 10px 100px;
@@ -207,6 +223,12 @@ table li::before {
   cursor: pointer;
 }
 
+.Signin-button:hover {
+  text-decoration: none;
+  transform: none;
+  box-shadow: 0 4px 10px #474747;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
 
 /* 결과 표출 ========================================== */
 .result {
